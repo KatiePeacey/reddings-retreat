@@ -20,6 +20,10 @@ jobs:
           node-version: '20'
 
       - name: Fetch latest Airbnb calendars
+        env:
+          AIRBNB_ICAL_WARREN: ${{ secrets.AIRBNB_ICAL_WARREN }}
+          AIRBNB_ICAL_BURROW: ${{ secrets.AIRBNB_ICAL_BURROW }}
+          AIRBNB_ICAL_FARMHOUSE: ${{ secrets.AIRBNB_ICAL_FARMHOUSE }}
         run: node scripts/update-availability.js
 
       - name: Commit changes if any

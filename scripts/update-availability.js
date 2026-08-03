@@ -10,9 +10,9 @@ const fs = require('fs');
 const path = require('path');
 
 const ICAL_URLS = {
-  warren: 'https://www.airbnb.co.uk/calendar/ical/633927008813716756.ics?t=966be81c80f14c53a51ed277628d3b5c',
-  burrow: 'https://www.airbnb.co.uk/calendar/ical/633845339100515691.ics?t=eb65a14765ac40b6ad25c6920cb9c3d5',
-  farmhouse: 'https://www.airbnb.co.uk/calendar/ical/52180369.ics?t=1f9bbac7c25b4785b19422c970aa6803',
+  warren: process.env.AIRBNB_ICAL_WARREN,
+  burrow: process.env.AIRBNB_ICAL_BURROW,
+  farmhouse: process.env.AIRBNB_ICAL_FARMHOUSE,
 };
 
 function parseBusyDates(icsText) {
